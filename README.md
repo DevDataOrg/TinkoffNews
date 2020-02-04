@@ -7,7 +7,7 @@
   Pull-to-refresh для обновления списка новостей\
   Нажатие на ячейку открывает просмотру полной информации новости\
   Показывать счётчик просмотров для каждой новости\
-  Кешировать новости, используя CoreData\
+  Кешировать новости, используя CoreData
 
 ![Image alt](https://github.com/msbinarycat/TinkoffNews/raw/master/Images/MainView.png)
 
