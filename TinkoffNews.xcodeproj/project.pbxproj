@@ -7,25 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A51C4B6423E9568E00442950 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51C4B6323E9568E00442950 /* DependencyContainer.swift */; };
 		A51CC7FA23E2D5F4007AF332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CC7F923E2D5F4007AF332 /* AppDelegate.swift */; };
 		A51CC7FC23E2D5F4007AF332 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CC7FB23E2D5F4007AF332 /* SceneDelegate.swift */; };
-		A51CC7FE23E2D5F4007AF332 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CC7FD23E2D5F4007AF332 /* ViewController.swift */; };
 		A51CC80123E2D5F4007AF332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51CC7FF23E2D5F4007AF332 /* Main.storyboard */; };
 		A51CC80423E2D5F4007AF332 /* TinkoffNews.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A51CC80223E2D5F4007AF332 /* TinkoffNews.xcdatamodeld */; };
 		A51CC80623E2D5F6007AF332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51CC80523E2D5F6007AF332 /* Assets.xcassets */; };
 		A51CC80923E2D5F6007AF332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51CC80723E2D5F6007AF332 /* LaunchScreen.storyboard */; };
+		A51CC81123E2D621007AF332 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CC81023E2D621007AF332 /* MainViewController.swift */; };
+		A51CC81423E2D661007AF332 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CC81323E2D661007AF332 /* CellViewController.swift */; };
+		A51CC81723E2E10C007AF332 /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CC81623E2E10C007AF332 /* MainViewViewModel.swift */; };
+		A51CC81A23E2E1A9007AF332 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CC81923E2E1A9007AF332 /* APIManager.swift */; };
+		A51CC81F23E2E21C007AF332 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CC81E23E2E21C007AF332 /* ResponseModel.swift */; };
+		A51CC82123E2E3BB007AF332 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CC82023E2E3BB007AF332 /* CellViewModel.swift */; };
+		A544762723E7E9B800A1E55B /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A544762623E7E9B800A1E55B /* NSAttributedStringExtension.swift */; };
+		A544762A23E801BA00A1E55B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A544762923E801BA00A1E55B /* CoreDataStack.swift */; };
+		A5B49A8123E70BFF00C7158B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B49A8023E70BFF00C7158B /* DetailViewController.swift */; };
+		A5B49A8323E70C5600C7158B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B49A8223E70C5600C7158B /* DetailViewModel.swift */; };
+		A5B49A8523E71FDC00C7158B /* DetailNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B49A8423E71FDC00C7158B /* DetailNews.swift */; };
+		A5B6149423E8708800139FE0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6149323E8708800139FE0 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A51C4B6323E9568E00442950 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		A51CC7F623E2D5F4007AF332 /* TinkoffNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51CC7F923E2D5F4007AF332 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A51CC7FB23E2D5F4007AF332 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A51CC7FD23E2D5F4007AF332 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A51CC80023E2D5F4007AF332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A51CC80323E2D5F4007AF332 /* TinkoffNews.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TinkoffNews.xcdatamodel; sourceTree = "<group>"; };
 		A51CC80523E2D5F6007AF332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A51CC80823E2D5F6007AF332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A51CC80A23E2D5F6007AF332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A51CC81023E2D621007AF332 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A51CC81323E2D661007AF332 /* CellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
+		A51CC81623E2E10C007AF332 /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
+		A51CC81923E2E1A9007AF332 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		A51CC81E23E2E21C007AF332 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		A51CC82023E2E3BB007AF332 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		A544762623E7E9B800A1E55B /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
+		A544762923E801BA00A1E55B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		A5B49A8023E70BFF00C7158B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A5B49A8223E70C5600C7158B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		A5B49A8423E71FDC00C7158B /* DetailNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNews.swift; sourceTree = "<group>"; };
+		A5B6149323E8708800139FE0 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +84,13 @@
 			children = (
 				A51CC7F923E2D5F4007AF332 /* AppDelegate.swift */,
 				A51CC7FB23E2D5F4007AF332 /* SceneDelegate.swift */,
-				A51CC7FD23E2D5F4007AF332 /* ViewController.swift */,
+				A51C4B6323E9568E00442950 /* DependencyContainer.swift */,
+				A51CC81823E2E192007AF332 /* APIManager */,
+				A544762823E801A700A1E55B /* CoreDataStack */,
+				A51CC81D23E2E211007AF332 /* Model */,
+				A51CC81223E2D626007AF332 /* View */,
+				A51CC81523E2DF4E007AF332 /* ViewModel */,
+				A544762523E7E98C00A1E55B /* Extensions */,
 				A51CC7FF23E2D5F4007AF332 /* Main.storyboard */,
 				A51CC80523E2D5F6007AF332 /* Assets.xcassets */,
 				A51CC80723E2D5F6007AF332 /* LaunchScreen.storyboard */,
@@ -68,6 +98,60 @@
 				A51CC80223E2D5F4007AF332 /* TinkoffNews.xcdatamodeld */,
 			);
 			path = TinkoffNews;
+			sourceTree = "<group>";
+		};
+		A51CC81223E2D626007AF332 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A51CC81023E2D621007AF332 /* MainViewController.swift */,
+				A51CC81323E2D661007AF332 /* CellViewController.swift */,
+				A5B49A8023E70BFF00C7158B /* DetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A51CC81523E2DF4E007AF332 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A51CC81623E2E10C007AF332 /* MainViewViewModel.swift */,
+				A51CC82023E2E3BB007AF332 /* CellViewModel.swift */,
+				A5B49A8223E70C5600C7158B /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A51CC81823E2E192007AF332 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				A51CC81923E2E1A9007AF332 /* APIManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		A51CC81D23E2E211007AF332 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A51CC81E23E2E21C007AF332 /* ResponseModel.swift */,
+				A5B49A8423E71FDC00C7158B /* DetailNews.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A544762523E7E98C00A1E55B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A544762623E7E9B800A1E55B /* NSAttributedStringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A544762823E801A700A1E55B /* CoreDataStack */ = {
+			isa = PBXGroup;
+			children = (
+				A544762923E801BA00A1E55B /* CoreDataStack.swift */,
+				A5B6149323E8708800139FE0 /* CoreDataManager.swift */,
+			);
+			path = CoreDataStack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +225,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A51CC7FE23E2D5F4007AF332 /* ViewController.swift in Sources */,
+				A51CC81423E2D661007AF332 /* CellViewController.swift in Sources */,
 				A51CC7FA23E2D5F4007AF332 /* AppDelegate.swift in Sources */,
 				A51CC80423E2D5F4007AF332 /* TinkoffNews.xcdatamodeld in Sources */,
+				A5B6149423E8708800139FE0 /* CoreDataManager.swift in Sources */,
 				A51CC7FC23E2D5F4007AF332 /* SceneDelegate.swift in Sources */,
+				A544762723E7E9B800A1E55B /* NSAttributedStringExtension.swift in Sources */,
+				A51C4B6423E9568E00442950 /* DependencyContainer.swift in Sources */,
+				A51CC82123E2E3BB007AF332 /* CellViewModel.swift in Sources */,
+				A51CC81723E2E10C007AF332 /* MainViewViewModel.swift in Sources */,
+				A544762A23E801BA00A1E55B /* CoreDataStack.swift in Sources */,
+				A51CC81123E2D621007AF332 /* MainViewController.swift in Sources */,
+				A5B49A8523E71FDC00C7158B /* DetailNews.swift in Sources */,
+				A5B49A8123E70BFF00C7158B /* DetailViewController.swift in Sources */,
+				A51CC81F23E2E21C007AF332 /* ResponseModel.swift in Sources */,
+				A5B49A8323E70C5600C7158B /* DetailViewModel.swift in Sources */,
+				A51CC81A23E2E1A9007AF332 /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
