@@ -22,7 +22,6 @@ class MainViewViewModel {
     }
     
     private var newsList: [NSManagedObject] = []
-    private let offset: Int = 20
     private var urlOffest: Int {
         return newsList.count
     }
@@ -61,7 +60,9 @@ extension MainViewViewModel {
                 self.newsList = try context.fetch(fetchRequest)
             } catch {
                 print(error)
-                completionHandler(.failure(error))
+                DispatchQueue.main.async {
+                    completionHandler(.failure(error))
+                }
             }
         } else {
             apiManager.loadNews(with: urlOffest) { result  in
@@ -74,7 +75,9 @@ extension MainViewViewModel {
                         completionHandler(.success("Success"))
                     }
                 case .failure(let error):
-                    completionHandler(.failure(error))
+                    DispatchQueue.main.async {
+                        completionHandler(.failure(error))
+                    }
                 }
             }
         }
@@ -84,22 +87,22 @@ extension MainViewViewModel {
     func updateNews(completionHandler: @escaping (Result<String, Error>) -> ()) {
         
         let urlOffsetForUpdate: Int = 0
-        var temporaryListOfNews: [NewsDescription] = []
         
         apiManager.loadNews(with: urlOffsetForUpdate) { result in
             switch result {
             case .success(let newNews):
-                temporaryListOfNews = newNews
+                DispatchQueue.main.async {
+                    for news in newNews {
+                        if !self.coreDataManager.newsIsAlreadyExist(news: news) {
+                            print(news.id)
+                            self.newsList.append(self.coreDataManager.createAndSaveEntityWithData(data: news))
+                        }
+                    }
+                }
             case .failure(let error):
-                completionHandler(.failure(error))
-            }
-        }
-        
-        for tempNews in temporaryListOfNews {
-            if coreDataManager.newsIsAlreadyExist(news: tempNews) {
-                completionHandler(.success("Success"))
-            } else {
-                self.newsList.append(self.coreDataManager.createAndSaveEntityWithData(data: tempNews))
+                DispatchQueue.main.async {
+                    completionHandler(.failure(error))
+                }
             }
         }
         
@@ -118,7 +121,9 @@ extension MainViewViewModel {
                     completionHandler(.success("Success"))
                 }
             case .failure(let error):
-                completionHandler(.failure(error))
+                DispatchQueue.main.async {
+                    completionHandler(.failure(error))
+                }
             }
         }
     }

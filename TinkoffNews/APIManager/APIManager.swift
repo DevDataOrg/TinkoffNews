@@ -27,7 +27,9 @@ extension APIManager {
         session.dataTask(with: url) { (data, response, error) in
             
             if let error = error {
-                completionHandler(.failure(error))
+                DispatchQueue.main.async {
+                    completionHandler(.failure(error))
+                }
             }
             
             guard let data = data else { return }
@@ -39,7 +41,9 @@ extension APIManager {
                 }
             } catch {
                 print(error)
-                completionHandler(.failure(error))
+                DispatchQueue.main.async {
+                    completionHandler(.failure(error))
+                }
             }
         }.resume()
     }
@@ -50,7 +54,9 @@ extension APIManager {
         session.dataTask(with: url) { (data, response, error) in
             
             if let error = error {
-                completionHandler(.failure(error))
+                DispatchQueue.main.async {
+                    completionHandler(.failure(error))
+                }
             }
             
             guard let data = data else { return }
@@ -62,7 +68,9 @@ extension APIManager {
                 }
             } catch {
                 print(error)
-                completionHandler(.failure(error))
+                DispatchQueue.main.async {
+                    completionHandler(.failure(error))
+                }
             }
         }.resume()
     }

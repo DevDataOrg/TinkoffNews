@@ -3,7 +3,7 @@
     <entity name="News" representedClassName="News" syncable="YES" codeGenerationType="class">
         <attribute name="countOfViews" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="newsId" optional="YES" attributeType="String"/>
         <attribute name="slug" optional="YES" attributeType="String"/>
         <attribute name="text" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>

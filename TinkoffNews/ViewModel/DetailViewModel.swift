@@ -33,7 +33,9 @@ extension DetailViewModel {
                 }
                 self.newsTitle = "\(newsTitle)"
             }
-            completionHandler(.success("Success"))
+            DispatchQueue.main.async {
+                completionHandler(.success("Success"))
+            }
         } else {
             let urlSlug = "\(news.value(forKey: "slug") ?? "")"
             
@@ -48,12 +50,13 @@ extension DetailViewModel {
                             self.newsText = attributedString
                             self.newsTitle = detailNews.title
                         }
+                        self.news.setValue(detailNews.text, forKey: "text")
                         completionHandler(.success("Success"))
                     }
-                    print(detailNews.text)
-                    self.news.setValue(detailNews.text, forKey: "text")
                 case .failure(let error):
-                    completionHandler(.failure(error))
+                    DispatchQueue.main.async {
+                        completionHandler(.failure(error))
+                    }
                 }
             }
         }

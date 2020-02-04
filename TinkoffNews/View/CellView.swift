@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CellViewController: UITableViewCell {
+class CellView: UITableViewCell {
     
     @IBOutlet weak var newsTitleLabel: UILabel!
     @IBOutlet weak var viewsCountLabel: UILabel!

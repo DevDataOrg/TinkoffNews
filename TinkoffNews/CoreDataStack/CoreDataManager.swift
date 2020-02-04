@@ -19,7 +19,7 @@ class CoreDataManager {
     
     func createAndSaveEntityWithData(data: NewsDescription) -> News {
         let newsEntity = News(context: self.context)
-        newsEntity.id = data.id
+        newsEntity.newsId = data.id
         newsEntity.title = data.title
         newsEntity.slug = data.slug
         newsEntity.countOfViews = 0
@@ -54,21 +54,18 @@ class CoreDataManager {
     func newsIsAlreadyExist(news: NewsDescription) -> Bool {
         
         let fetchRequest: NSFetchRequest<News> = News.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "news.id = %@", news.id)
+        fetchRequest.predicate = NSPredicate(format: "newsId = %@", news.id)
         
         var tempList: [NSManagedObject] = []
         
         do {
             tempList = try context.fetch(fetchRequest)
-        } catch let error as NSError {
+            print(tempList)
+        } catch {
             print(error)
         }
         
-        if tempList.isEmpty {
-            return false
-        } else {
-            return true
-        }
+        return tempList.count > 0
     }
     
     func save() {

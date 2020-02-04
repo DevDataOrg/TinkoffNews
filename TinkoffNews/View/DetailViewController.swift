@@ -32,19 +32,11 @@ class DetailViewController: UIViewController {
                     self.newsTextLabel.accessibilityScroll(.down)
                 }
             case .failure(let error):
-                self.showAlertForError(error: error.localizedDescription)
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+                    self.showAlertForError(error: error.localizedDescription)
+                }
             }
         }
-    }
-}
-
-extension DetailViewController {
-    
-    func showAlertForError(error: String) {
-        let ac = UIAlertController(title: "Error", message: "\(error)", preferredStyle: .alert)
-        let acAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        
-        ac.addAction(acAction)
-        self.present(ac, animated: true, completion: nil)
     }
 }

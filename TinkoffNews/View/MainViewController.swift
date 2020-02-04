@@ -73,11 +73,17 @@ class MainViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CellViewController
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CellView
 
         cell.viewModel = viewModel.cellViewModel(for: indexPath)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.increaseCountOfViews(at: indexPath)
+        tableView.reloadData()
+        self.performSegue(withIdentifier: "ShowDetailController", sender: indexPath)
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -99,12 +105,6 @@ class MainViewController: UITableViewController {
     
     // MARK: – Navigation
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.increaseCountOfViews(at: indexPath)
-        tableView.reloadData()
-        self.performSegue(withIdentifier: "ShowDetailController", sender: indexPath)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = sender as? IndexPath,
             let destination = segue.destination as? DetailViewController {
@@ -113,7 +113,7 @@ class MainViewController: UITableViewController {
     }
 }
 
-extension MainViewController {
+extension UIViewController {
     
     func showAlertForError(error: String) {
         let ac = UIAlertController(title: "Error", message: "\(error)", preferredStyle: .alert)

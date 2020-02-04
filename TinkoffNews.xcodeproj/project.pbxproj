@@ -15,7 +15,7 @@
 		A51CC80623E2D5F6007AF332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51CC80523E2D5F6007AF332 /* Assets.xcassets */; };
 		A51CC80923E2D5F6007AF332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51CC80723E2D5F6007AF332 /* LaunchScreen.storyboard */; };
 		A51CC81123E2D621007AF332 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CC81023E2D621007AF332 /* MainViewController.swift */; };
-		A51CC81423E2D661007AF332 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CC81323E2D661007AF332 /* CellViewController.swift */; };
+		A51CC81423E2D661007AF332 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CC81323E2D661007AF332 /* CellView.swift */; };
 		A51CC81723E2E10C007AF332 /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CC81623E2E10C007AF332 /* MainViewViewModel.swift */; };
 		A51CC81A23E2E1A9007AF332 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CC81923E2E1A9007AF332 /* APIManager.swift */; };
 		A51CC81F23E2E21C007AF332 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CC81E23E2E21C007AF332 /* ResponseModel.swift */; };
@@ -39,7 +39,7 @@
 		A51CC80823E2D5F6007AF332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A51CC80A23E2D5F6007AF332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A51CC81023E2D621007AF332 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		A51CC81323E2D661007AF332 /* CellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
+		A51CC81323E2D661007AF332 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		A51CC81623E2E10C007AF332 /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
 		A51CC81923E2E1A9007AF332 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		A51CC81E23E2E21C007AF332 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				A51CC81023E2D621007AF332 /* MainViewController.swift */,
-				A51CC81323E2D661007AF332 /* CellViewController.swift */,
+				A51CC81323E2D661007AF332 /* CellView.swift */,
 				A5B49A8023E70BFF00C7158B /* DetailViewController.swift */,
 			);
 			path = View;
@@ -225,7 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A51CC81423E2D661007AF332 /* CellViewController.swift in Sources */,
+				A51CC81423E2D661007AF332 /* CellView.swift in Sources */,
 				A51CC7FA23E2D5F4007AF332 /* AppDelegate.swift in Sources */,
 				A51CC80423E2D5F4007AF332 /* TinkoffNews.xcdatamodeld in Sources */,
 				A5B6149423E8708800139FE0 /* CoreDataManager.swift in Sources */,
