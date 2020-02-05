@@ -91,11 +91,10 @@ extension MainViewViewModel {
         apiManager.loadNews(with: urlOffsetForUpdate) { result in
             switch result {
             case .success(let newNews):
-                DispatchQueue.main.async {
-                    for news in newNews {
-                        if !self.coreDataManager.newsIsAlreadyExist(news: news) {
-                            print(news.id)
-                            self.newsList.append(self.coreDataManager.createAndSaveEntityWithData(data: news))
+                for news in newNews {
+                    DispatchQueue.main.async {
+                        if !(self.coreDataManager.newsIsAlreadyExist(news: news)) {
+                            self.newsList.insert(self.coreDataManager.createAndSaveEntityWithData(data: news), at: 0)
                         }
                     }
                 }
@@ -105,7 +104,6 @@ extension MainViewViewModel {
                 }
             }
         }
-        
         completionHandler(.success("Success"))
     }
     

@@ -60,7 +60,6 @@ class CoreDataManager {
         
         do {
             tempList = try context.fetch(fetchRequest)
-            print(tempList)
         } catch {
             print(error)
         }

@@ -21,7 +21,6 @@ class MainViewController: UITableViewController {
         activityIndicator.startAnimating()
         
         viewModel.getNews { result in
-            
             switch result {
             case .success(_):
                 DispatchQueue.main.async {
