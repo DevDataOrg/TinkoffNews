@@ -65,7 +65,7 @@ extension MainViewViewModel {
                 }
             }
         } else {
-            apiManager.loadNews(with: urlOffest) { result  in
+            apiManager.loadNews(with: urlOffest) { [unowned self] result  in
                 switch result {
                 case .success(let newNews):
                     DispatchQueue.main.async {
@@ -88,7 +88,7 @@ extension MainViewViewModel {
         
         let urlOffsetForUpdate: Int = 0
         
-        apiManager.loadNews(with: urlOffsetForUpdate) { result in
+        apiManager.loadNews(with: urlOffsetForUpdate) { [unowned self] result in
             switch result {
             case .success(let newNews):
                 for news in newNews {
@@ -108,7 +108,7 @@ extension MainViewViewModel {
     }
     
     func getMoreNews(completionHandler: @escaping (Result<String, Error>) -> ()) {
-        apiManager.loadNews(with: urlOffest) { result in
+        apiManager.loadNews(with: urlOffest) { [unowned self] result in
             
             switch result {
             case .success(let newNews):

@@ -39,8 +39,7 @@ extension DetailViewModel {
         } else {
             let urlSlug = "\(news.value(forKey: "slug") ?? "")"
             
-            apiManager.loadTextForNews(with: urlSlug) { result in
-                
+            apiManager.loadTextForNews(with: urlSlug) { [unowned self] result in
                 switch result {
                 case .success(let detailNews):
                     DispatchQueue.main.async {
